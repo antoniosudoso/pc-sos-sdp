@@ -5,9 +5,9 @@
 </p>
 
 
-**PC-SOS-SDP** is an exact algorithm based on the branch-and-bound technique for solving the semi-supervised Minimum Sum-of-Squares Clustering (MSSC) problem with pairwise constraints (i.e. must-link and cannot-link constraints) described in the paper ["An Exact Algorithm for Semi-supervised Minimum Sum-of-Squares Clustering"](https://doi.org/10.1016/j.cor.2022.105958). This repository contains the C++ source code, the MATLAB scripts, and the datasets used for the experiments.
+**PC-SOS-SDP** is an exact algorithm based on the branch-and-bound technique for solving the semi-supervised Minimum Sum-of-Squares Clustering (MSSC) problem with pairwise constraints (i.e. must-link and cannot-link constraints) described in the paper ["An exact algorithm for semi-supervised minimum sum-of-squares clustering"](https://doi.org/10.1016/j.cor.2022.105958). This repository contains the C++ source code, the MATLAB scripts, and the datasets used for the experiments.
 
-> V. Piccialli, A. Russo Russo, A. M. Sudoso, An Exact Algorithm for Semi-supervised Minimum Sum-of-Squares Clustering, **Computers & Operations Research** (2022), https://doi.org/10.1016/j.cor.2022.105958.
+> V. Piccialli, A. Russo Russo, A. M. Sudoso (2022). An exact algorithm for semi-supervised minimum sum-of-squares clustering. **Computers & Operations Research**, https://doi.org/10.1016/j.cor.2022.105958.
 
 ## Installation
 **PC-SOS-SDP** calls the semidefinite programming solver [SDPNAL+](https://blog.nus.edu.sg/mattohkc/softwares/sdpnalplus/) by using the [MATLAB Engine API](https://www.mathworks.com/help/matlab/calling-matlab-engine-from-cpp-programs.html) for C++. It requires the MATLAB engine library *libMatlabEngine* and the Matlab Data Array library *libMatlabDataArray*. **PC-SOS-SDP** calls the integer programming solver [Gurobi](https://www.gurobi.com/). **PC-SOS-SDP** uses the [Armadillo](http://arma.sourceforge.net/) library to handle matrices and linear algebra operations efficiently. Before installing Armadillo, first install OpenBLAS and LAPACK along with the corresponding development files. **PC-SOS-SDP** implements a configurable thread pool of POSIX threads to speed up the branch-and-bound search.
@@ -183,10 +183,10 @@ BEST: 93.4704
 
 ## Related Works
 
-> V. Piccialli, A. M. Sudoso, A. Wiegele, SOS-SDP: an Exact Solver for Minimum Sum-of-Squares Clustering, **INFORMS Journal on Computing** (2022).
+> V. Piccialli, A. M. Sudoso, A. Wiegele (2022). SOS-SDP: An Exact Solver for Minimum Sum-of-Squares Clustering, **INFORMS Journal on Computing**.
 - Paper: https://doi.org/10.1287/ijoc.2022.1166
 - Code: https://github.com/antoniosudoso/sos-sdp
 
-> Piccialli, V., Sudoso, A. M. Global optimization for cardinality-constrained minimum sum-of-squares clustering via semidefinite programming. **Mathematical Programming** (2023).
+> V. Piccialli, A. M. Sudoso (2023). Global optimization for cardinality-constrained minimum sum-of-squares clustering via semidefinite programming, **Mathematical Programming**.
 - Paper: https://doi.org/10.1007/s10107-023-02021-8
 - Code: https://github.com/antoniosudoso/cc-sos-sdp
